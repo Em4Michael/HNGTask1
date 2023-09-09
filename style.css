@@ -114,4 +114,7 @@
         color: #00ffcc;
         font-size: 1.2em;
       }
+      button{
+      width: 15rem;
+      }
   }
