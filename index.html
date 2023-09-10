@@ -7,40 +7,49 @@
     <title>My Personal Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="Profile-card">
-            <div class="Upper-Profile-card">
-                <span class="name-holder">
-                    <h1 data-testid="slackUserName">Em4michael</h1>
-                </span>
-                <span class="image-holder">
-                    <img src="images/me.png" alt="Em4michael" data-testid="slackDisplayImage">
-                </span>
-
+    <div>
+      <div class="container">
+        <div class="holder">
+          <div class="profile">
+            <p data-testid="slackUserName" id="slack_username">Em4michael</p>
+            <div class="profile-img-holder">
+              <div id="profile-image">
+                <img
+                  src="images/me.png"
+                  alt="Em4michael"
+                  data-testid="slackDisplayImage"
+                />
+              </div>
             </div>
-            <div class="Lower-Profile-card">
-                <div class="timeWidget">
-                    <span class="day-holder">
-                        <p data-testid="currentDayOfTheWeek"> </p>
-                    </span>
-                    <span class="time-holder">
-                        <p data-testid="currentUTCTime"> </p>
-                    </span>
-                </div>
-
-                <h2 class="track-holder" data-testid="myTrack">Frontend</h2>
-
-                <a href="https://github.com/Em4Michael/HNGTask1" target="_blank" data-testid="githubURL">
-
-                    <button>
-                        Github Repository
-                    </button>
-                </a>
+          </div>
+          <div class="live-data">
+            <div class="current-day">
+              <p data-testid="currentDayOfTheWeek" class="current-data">
+                Loading...
+              </p>
             </div>
+            <div class="current-time">
+              <p data-testid="currentUTCTime" class="current-data">
+                Loading...
+              </p>
+            </div>
+            <p data-testid="myTrack" id="my-track">Frontend Track</p>
+          </div>
+          <button>
+            <a
+              href="https://github.com/Em4Michael/HNGTask1"
+              target="_blank"
+              data-testid="githubURL"
+            >
+              Github Repository</a
+            >
+          </button>
         </div>
+      </div>
     </div>
+
+
 
     <script>
 
@@ -58,7 +67,6 @@
             currentUTCTimeElement.textContent = `${currentUTCTime} ms`;
         }
 
-        // Update time immediately and then every second
         updateDateTime();
         setInterval(updateDateTime, 1000);
 
